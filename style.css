@@ -98,7 +98,8 @@ h2 {
 
 .head {
     float: left;
-    
+    background: #F8F8FF;
+    opacity: 1;
     margin: 0 1.5%;
     width: 30%;
 }
