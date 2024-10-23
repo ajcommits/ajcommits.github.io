@@ -6,69 +6,89 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: #333;
     line-height: 1.6;
     background-color: #f4f4f4;
     padding: 0 20px;
 }
 
-/* Header */
+/* Header with background image */
 header {
-    background: #0047ab;
+    background: url('your-image-url.jpg') no-repeat center center/cover;
     color: white;
-    padding: 20px;
     text-align: center;
+    padding: 100px 0;
 }
 
 header h1 {
-    font-size: 2.5em;
+    font-size: 3em;
     margin-bottom: 10px;
 }
 
 header p {
+    font-size: 1.3em;
+}
+
+/* Call to action button */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0047ab;
+    color: white;
+    text-decoration: none;
     font-size: 1.2em;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background-color: #003a8c;
+    transform: translateY(-3px);
 }
 
 /* Section Titles */
 section h2 {
-    font-size: 2em;
+    font-size: 2.5em;
     color: #0047ab;
     margin-bottom: 20px;
     border-bottom: 2px solid #ddd;
     padding-bottom: 10px;
+    text-align: center;
 }
 
 /* About Section */
 #about {
     background: white;
-    padding: 40px 20px;
+    padding: 60px 20px;
     margin-bottom: 40px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 #about p {
-    font-size: 1.1em;
+    font-size: 1.2em;
     line-height: 1.8;
     margin-bottom: 20px;
 }
 
-/* Project Section */
+/* Project Section using Flexbox */
 #projects {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     gap: 20px;
 }
 
 #projects .project {
     background: white;
     padding: 20px;
-    flex: 1;
-    min-width: 300px;
+    flex-basis: 48%;
     margin-bottom: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
 }
 
 #projects h3 {
@@ -81,61 +101,36 @@ section h2 {
     line-height: 1.6;
 }
 
-/* Skills Section */
-#skills ul {
-    list-style-type: none;
+#projects .project:hover {
+    transform: translateY(-5px);
+}
+
+/* Contact Section with Icons */
+#contact ul {
+    list-style: none;
+    text-align: center;
     padding: 0;
 }
 
-#skills ul li {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-}
-
-#skills ul li strong {
-    color: #0047ab;
-}
-
-/* Contact Section */
-#contact {
-    background: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-#contact ul {
-    list-style-type: none;
-}
-
 #contact ul li {
-    font-size: 1.1em;
+    font-size: 1.2em;
     margin-bottom: 15px;
 }
 
 #contact ul a {
     color: #0047ab;
     text-decoration: none;
+    font-size: 1.2em;
+    display: inline-flex;
+    align-items: center;
+}
+
+#contact ul a i {
+    margin-right: 10px;
 }
 
 #contact ul a:hover {
     text-decoration: underline;
-}
-
-/* Button Styles */
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #0047ab;
-    color: white;
-    text-decoration: none;
-    font-size: 1.1em;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.btn:hover {
-    background-color: #003a8c;
 }
 
 /* Footer */
@@ -147,13 +142,37 @@ footer {
     color: white;
 }
 
+/* Add smooth animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section, .project {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 2em;
+        font-size: 2.5em;
+    }
+
+    header p {
+        font-size: 1.1em;
     }
 
     #projects {
         flex-direction: column;
+    }
+
+    #projects .project {
+        flex-basis: 100%;
     }
 }
