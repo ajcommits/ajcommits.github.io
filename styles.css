@@ -11,7 +11,6 @@ body {
     line-height: 1.6;
     background-color: #f4f4f4;
     padding: 0 20px;
-    /* Ensure body takes up the necessary height */
     height: auto;
     min-height: 100vh;
     overflow-x: hidden;
@@ -19,26 +18,28 @@ body {
 
 /* Header */
 header {
-    background: #0047ab;
-    color: white;
+    background: #0047ab; /* Keep the solid blue background */
+    color: white; /* Ensure the text is white */
     text-align: center;
-    padding: 50px 0;
+    padding: 100px 20px; /* Increased padding for better spacing */
 }
 
 header h1 {
     font-size: 3em;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    color: white; /* Ensure header text is white */
 }
 
 header p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
+    font-size: 1.3em;
+    color: white; /* Ensure subtext is white */
+    margin-bottom: 30px;
 }
 
 .btn {
     display: inline-block;
-    padding: 10px 20px;
-    background-color: #003a8c;
+    padding: 12px 25px;
+    background-color: #003a8c; /* Darker button background */
     color: white;
     text-decoration: none;
     font-size: 1.1em;
@@ -47,8 +48,8 @@ header p {
 }
 
 .btn:hover {
-    background-color: #002f73;
-    transform: translateY(-3px);
+    background-color: #002f73; /* Darker hover effect */
+    transform: translateY(-3px); /* Slight hover movement */
 }
 
 /* Section Titles */
@@ -69,8 +70,7 @@ section h2 {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    /* Set height to auto to avoid clipping */
-    height: auto;
+    height: auto; /* Ensure the height is flexible */
 }
 
 #about p {
@@ -87,7 +87,6 @@ footer {
     color: white;
     margin-top: 40px;
     position: relative;
-    /* Ensure it does not overlap content */
     width: 100%;
 }
 
